@@ -35,7 +35,7 @@ export default function Builder() {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:5000/api/forms/create",
+        "https://formify-backend-zkl2.onrender.com/api/forms/create",
         {
           title,
           description,

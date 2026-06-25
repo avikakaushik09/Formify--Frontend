@@ -17,7 +17,7 @@ export default function ResponsesPage() {
 
   const fetchResponses = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/responses/${id}`);
+      const res = await axios.get(`https://formify-backend-zkl2.onrender.com/api/responses/${id}`);
       setResponses(res.data);
     } catch (error) {
       console.log(error);

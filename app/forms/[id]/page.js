@@ -18,7 +18,7 @@ export default function PublicForm() {
 
   const fetchForm = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/forms/${id}`);
+      const res = await axios.get(`https://formify-backend-zkl2.onrender.com/api/forms/${id}`);
       setForm(res.data);
     } catch (error) {
       console.log(error);
@@ -34,7 +34,7 @@ export default function PublicForm() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:5000/api/responses/submit", {
+      await axios.post("https://formify-backend-zkl2.onrender.com/api/responses/submit", {
         formId: id,
         responses,
       });
